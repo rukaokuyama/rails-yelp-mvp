@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render "restaurant", restaurant: @restaurant %>
+<% @restaurant.reviews.each do |review| %>
+  <%= render "review", review: review %>
+<% end %>
 
 <div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
